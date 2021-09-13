@@ -1,0 +1,89 @@
+접근제한자	같은클래스	같은패키지	자식클래스	다른패키지
+private		ㅇ		x		x		x
+defaul		ㅇ		ㅇ		x(ㅇ)		x
+protected	ㅇ		ㅇ		ㅇ		x(ㅇ)
+public		ㅇ		ㅇ		ㅇ		ㅇ
+
+=> (ㅇ) 는 상속관계인 경우
+
+B b = new B();//B클래스 객체 생성
+
+class 클래스명 {
+//클래스 구성멤버
+//필드
+//생성자
+//메소드
+}
+
+abstract class 추상클래스명{
+//추상클래스 구성멤버
+//필드
+//생성자
+//추상메소드
+//메소드
+//용도:자식객체의 필드나 메소드 이름을 "통일"할 목적
+//
+}
+
+interface 인터페이스명{
+//상수
+//추상메소드
+//디폴트메소드
+//정적메소드
+//용도:객체의 교환성을 높여 "다형성"을 구현함
+}
+
+"10"->10
+"10a"->x // 예외발생, NumberFormatException
+
+Object 는 모든 객체들의 부모
+
+public class Box{
+	private String object;
+	public void set(String object){
+		this.object = object;
+	}
+	public String get() {
+		return object;
+	}
+}
+
+Box box = new Box();
+box.set("hello"); //형변환 없음
+String str = box.get();//box에 들어가 있는 값 호출, 형변환 없음
+
+box.set(new Cat());//들어갈 수 없음, 형변환이 되지 않았기 때문
+		//String <- Cat() X
+		//Object object = new Cat();
+
+interface 인터페이스명 {
+	//상수
+	int PI = 3.145
+	//추상메소드
+	void set();//실행문 없음, 구현클래스에서 구현
+	//default 메소드
+	default void get(){실행문};
+	//static 메소드
+	static String getStr(){실행문};
+}
+
+A a = new A();//클래스가 아니므로 객체 생성 불가
+=>구현클래스를 만들어야함
+
+구현클래스
+class B implements A {
+	//추상메소드 구현(필수)
+	@Override
+	void set() {실행문(구현내용)}
+}
+
+A a = new B(); // 인터페이스 변수 = 구현객체;
+
+List<String> list = new ArrayList<String>();
+List<Box> list = new ArrayList<Box>();
+
+Integer i = 1; //boxing이라고 함
+=>1이라는 객체를 만드는것(1은 Integer객체가 되는것)
+=>Integer i = new Integer(1); 하고 같음
+
+0913 java chap11,13,15
