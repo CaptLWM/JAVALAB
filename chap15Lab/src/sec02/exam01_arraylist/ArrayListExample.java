@@ -8,10 +8,10 @@ public class ArrayListExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<String> list = new ArrayList<String>();
+		//인터페이슨 변수 = 구현객체; //자동형변수
 		
 		list.add("Java");//0
 		list.add("JDBC");//1
-		list.add("iBatis");//4
 		list.add("servlet/JSB");//2->3
 		list.add(2,"Database");//2, servlet/JSB가 밀려서 3자리에 가게됨
 		list.add("iBatis");//4

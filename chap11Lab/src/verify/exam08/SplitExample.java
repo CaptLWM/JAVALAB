@@ -15,7 +15,7 @@ public class SplitExample {
 		System.out.println();
 		
 		//방법2(StringTokenizer 이용)
-		StringTokenizer st = new StringTokenizer(str, ",");
+		StringTokenizer st = new StringTokenizer(str, ",");//생성자 호출
 		while(st.hasMoreTokens()) {
 			String token = st.nextToken();
 			System.out.println(token);

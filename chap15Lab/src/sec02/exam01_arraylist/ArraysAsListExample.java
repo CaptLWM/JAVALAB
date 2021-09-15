@@ -12,8 +12,8 @@ public class ArraysAsListExample {
 			System.out.println(name);
 		}
 		
-		List<Integer> list2 = Arrays.asList(1,2,3);
-		for(int value : list2) {
+		List<Integer> list2 = Arrays.asList(1,2,3);//auto boxing
+		for(int value : list2) {//auto unboxing
 			System.out.println(value);
 		}
 	}
